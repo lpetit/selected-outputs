@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>µTracto · Microscopic Tractography · Selected Scientific Outputs</title>
+<style>
+:root{--ivory:#eef2f3;--paper:#ffffff;--ink:#17252b;--muted:#617078;--forest:#263f49;--forest2:#b7643d;--line:#d4dde0;--mint:#f3e4dc;--accent:#c47a55}
+*{box-sizing:border-box}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit}
+.wrap{width:min(1160px,92vw);margin:auto}.top{padding:18px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(245,243,236,.94);backdrop-filter:blur(10px);z-index:5}
+.topin{display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:700}.langs button{border:1px solid var(--line);background:transparent;padding:7px 10px;cursor:pointer}.langs button.active{background:var(--forest);color:white}
+.hero{padding:72px 0 54px;background:linear-gradient(120deg,#eef2f3 0%,#eef2f3 55%,#f4e4dc 100%)}.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--forest2);margin-bottom:12px}
+h1{font-size:clamp(70px,11vw,150px);line-height:.95;letter-spacing:-.055em;margin:0 0 20px;max-width:900px}h2{font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-.035em;margin:8px 0 18px}h3{font-size:22px;line-height:1.15;margin:0 0 10px}
+.lead{font-size:21px;max-width:760px;color:#42564f}.thesis{margin-top:38px;padding:25px 28px;border-left:5px solid var(--forest2);background:var(--paper);font-size:24px;font-weight:700;max-width:900px}
+.papers{display:grid;grid-template-columns:1fr 70px 1fr;gap:22px;align-items:center;padding:18px 0 64px}.paper{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;grid-template-columns:145px 1fr;gap:20px;align-items:center;text-decoration:none;transition:.2s}.paper:hover{transform:translateY(-3px);box-shadow:0 12px 30px #17322c16}.paper img{width:100%;height:185px;object-fit:cover;object-position:top;border:1px solid #ddd}.tag{font-size:11px;letter-spacing:.14em;font-weight:800;color:var(--forest2)}.arrow{text-align:center;font-size:40px;color:var(--accent)}
+.section{padding:72px 0;border-top:1px solid var(--line)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.figure{margin:0;cursor:zoom-in}.figure img{width:100%;display:block;border-radius:14px;border:1px solid var(--line);background:white}.cap{font-size:12px;color:var(--muted);margin-top:8px}
+.dark{background:var(--forest);color:#f5f3ec}.dark .kicker,.dark .cap{color:#bdd0c6}.dark .figure img{border-color:#42685c}.dark p{color:#dce8e2}
+.statement{font-size:clamp(32px,4.4vw,58px);line-height:1.02;letter-spacing:-.04em;font-weight:800;max-width:950px;margin:0}.statement em{font-style:normal;color:#a9cbbb}
+.program{background:var(--mint);border-radius:24px;padding:36px}.programhead{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.anr{border:1px solid #8fa99c;border-radius:999px;padding:8px 13px;font-size:12px;font-weight:800;white-space:nowrap}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}.card{background:rgba(255,255,255,.55);border:1px solid #b9ccc2;border-radius:16px;padding:20px}.card strong{display:block;font-size:20px;margin-bottom:6px}.btn{display:inline-block;background:var(--forest);color:white;text-decoration:none;padding:11px 16px;border-radius:999px;font-weight:700;font-size:13px}
+.flow{display:grid;grid-template-columns:1fr 80px 1fr 80px 1fr;align-items:center;gap:12px;margin-top:35px}.flowbox{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;text-align:center}.flowarrow{text-align:center;font-size:30px}
+.final{padding:82px 0}.final .statement{margin-bottom:24px}.small{font-size:13px;color:var(--muted)}
+footer{padding:28px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.modal{display:none;position:fixed;inset:0;background:#07120feF;z-index:20;padding:28px;overflow:auto}.modal.open{display:flex}.modalbox{margin:auto;max-width:1200px;width:100%;background:var(--paper);color:var(--ink);border-radius:18px;padding:18px}.modal img{display:block;max-width:100%;max-height:72vh;margin:auto}.modaltop{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:12px}.close{font-size:26px;border:0;background:none;cursor:pointer}.modalcap{margin:15px 0}.modalactions a{font-weight:700}
+[data-fr]{display:none!important} html.fr [data-en]{display:none!important} html.fr [data-fr]{display:initial!important} html.fr p[data-fr],html.fr h1[data-fr],html.fr h2[data-fr],html.fr h3[data-fr],html.fr div[data-fr],html.fr strong[data-fr]{display:block!important}
+@media(max-width:800px){.papers,.grid2,.cards{grid-template-columns:1fr}.papers .arrow{transform:rotate(90deg)}.paper{grid-template-columns:105px 1fr}.paper img{height:145px}.flow{grid-template-columns:1fr}.flowarrow{transform:rotate(90deg)}.programhead{display:block}.anr{display:inline-block;margin-top:10px}.hero{padding-top:42px}}
+
+.shift-hero{padding:62px 0 52px!important;background:#eef2f3!important;border-bottom:1px solid var(--line)}
+.shift-title{font-size:clamp(42px,6.4vw,92px)!important;line-height:.98!important;letter-spacing:-.045em!important;max-width:1500px;margin:22px 0 28px!important}
+.shift-title span{color:#b7643d}
+.hero-sub{font-size:clamp(18px,2vw,28px);margin-top:22px}.hero-sub b{font-size:1.35em}
+.beyond{font-size:clamp(20px,2.2vw,31px);max-width:1050px;margin:24px 0 0;line-height:1.3}
+
+.card{min-height:180px;display:flex;flex-direction:column;justify-content:flex-start;gap:14px}
+.card strong{font-size:22px;line-height:1.05;margin:0}
+.card div{font-size:18px;line-height:1.35}
+html.fr .card strong{font-size:21px}
+html.fr .card div{font-size:17px}
+@media(max-width:980px){.cards{grid-template-columns:1fr}.card{min-height:auto}}
+
+
+.papergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:20px 0 64px}.papergrid .paper{grid-template-columns:110px 1fr}.papergrid .paper img{height:155px}.stepnote{font-size:12px;letter-spacing:.12em;font-weight:800;color:var(--forest2);margin-bottom:5px}.bigcompare{margin-top:34px}.bigcompare img{max-height:760px;object-fit:contain;background:white}.program .card{min-height:165px}@media(max-width:980px){.papergrid{grid-template-columns:1fr}.papergrid .paper{grid-template-columns:100px 1fr}}
+
+.result-section{padding:78px 0}.result-section h2{max-width:980px;margin-bottom:34px}.result-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,.75fr);gap:42px;align-items:center}.result-figure img{max-height:720px;object-fit:contain}.result-copy p{font-size:19px;line-height:1.55;margin:0}.dark .result-copy p{color:#e7efeb}@media(max-width:900px){.result-grid{grid-template-columns:1fr}.result-copy p{font-size:17px}}
+</style></head><body>
+<header class="top"><div class="wrap topin"><div class="brand">Selected Scientific Outputs · 2022–2026</div><div class="langs"><button id="en" class="active">EN</button><button id="fr">FR</button></div></div></header>
+<main>
+<section class="hero shift-hero"><div class="wrap">
+<div class="kicker" data-en>THE SCIENTIFIC SHIFT</div><div class="kicker" data-fr>LE CHANGEMENT DE PARADIGME</div>
+<h1 class="shift-title" data-en>From using microscopy to validate tractography<br><span>to making tractography directly from microscopy.</span></h1>
+<h1 class="shift-title" data-fr>De la microscopie pour valider la tractographie<br><span>à une tractographie directement issue de la microscopie.</span></h1>
+<p class="beyond" data-en><b>µTracto</b> follows the maturation of one idea: make anatomical evidence interoperable with tractography, inject that evidence into the tracking algorithm itself, then extend tractography beyond diffusion MRI to microscopic structural imaging.</p>
+<p class="beyond" data-fr><b>µTracto</b> retrace la maturation d’une même idée : rendre l’information anatomique interopérable avec la tractographie, l’injecter au cœur de l’algorithme de tracking, puis étendre la tractographie au-delà de l’IRM de diffusion vers une imagerie structurale microscopique.</p>
+</div></section>
+
+<section><div class="wrap"><div class="kicker" style="margin-top:30px" data-en>ONE IDEA · THREE STEPS</div><div class="kicker" style="margin-top:30px" data-fr>UNE IDÉE · TROIS ÉTAPES</div>
+<div class="papergrid">
+<a class="paper" href="assets/abou-hamdan-2023.pdf" target="_blank"><img src="assets/abou_first.png"><div><div class="stepnote">2023 · MAKE DATA TALK</div><h3>m2m</h3><p data-en>Allen tracing ↔ neuroimaging and tractography</p><p data-fr>Traçage Allen ↔ neuroimagerie et tractographie</p></div></a>
+<a class="paper" href="assets/adavit-2026.pdf" target="_blank"><img src="assets/adavit_first.png"><div><div class="stepnote">2026 · MAKE ANATOMY GUIDE TRACKING</div><h3>AdaViT</h3><p data-en>Viral tracing → anatomically informed dMRI tractography</p><p data-fr>Traçage viral → tractographie IRMd informée par l’anatomie</p></div></a>
+<a class="paper" href="assets/poirier-2026.pdf" target="_blank"><img src="assets/poirier_first.png"><div><div class="stepnote">2026 · GO BEYOND dMRI</div><h3>S-OCT tractography</h3><p data-en>Microscopy → tractography</p><p data-fr>Microscopie → tractographie</p></div></a>
+</div></div></section>
+
+<section class="section"><div class="wrap"><div class="program">
+<div class="programhead"><div><div class="kicker" data-en>BORN WITHIN</div><div class="kicker" data-fr>NÉ DANS LE CADRE DE</div><h2>CROSS-TRACTS</h2></div><div class="anr">ANR-22-CE45-0004 · 2022–2026</div></div>
+<p data-en><b>How can the real topology of white-matter fiber crossings be measured and used to make tractography more anatomically grounded?</b></p>
+<p data-fr><b>Comment mesurer la topologie réelle des croisements de fibres de la substance blanche et l’utiliser pour rendre la tractographie plus fidèle à l’anatomie ?</b></p>
+<div class="cards">
+<div class="card"><strong data-en>Interoperate</strong><strong data-fr>Interopérer</strong><div><span data-en>Bring Allen anatomy and tractography into a common space.</span><span data-fr>Mettre l’anatomie Allen et la tractographie dans un espace commun.</span></div></div>
+<div class="card"><strong data-en>Constrain</strong><strong data-fr>Contraindre</strong><div><span data-en>Inject anatomical ground truth into dMRI tracking at runtime.</span><span data-fr>Injecter la vérité terrain anatomique dans le tracking IRMd pendant la reconstruction.</span></div></div>
+<div class="card"><strong data-en>Generalize</strong><strong data-fr>Généraliser</strong><div><span data-en>Extend tractography beyond diffusion MRI to microscopic structural imaging.</span><span data-fr>Étendre la tractographie au-delà de l’IRM de diffusion vers l’imagerie structurale microscopique.</span></div></div>
+</div>
+<a class="btn cross-en" href="https://lpetit.github.io/cross-tracts/" target="_blank">Explore CROSS-TRACTS ↗</a><a class="btn cross-fr" style="display:none" href="https://lpetit.github.io/cross-tracts/" target="_blank">Découvrir CROSS-TRACTS ↗</a>
+</div></div></section>
+
+<section class="section result-section"><div class="wrap">
+<div class="kicker" data-en>01 · m2m · MAKE DATA TALK</div><div class="kicker" data-fr>01 · m2m · FAIRE DIALOGUER LES DONNÉES</div>
+<h2 data-en>Bring viral tracing and tractography into the same anatomical space.</h2><h2 data-fr>Réunir traçage viral et tractographie dans un même espace anatomique.</h2>
+<div class="result-grid"><figure class="figure result-figure" data-img="assets/abou_fig5_result.png" data-paper="assets/abou-hamdan-2023.pdf" data-cap-en="Abou-Hamdan et al. (2023), Fig. 5. A cortico-thalamic tractogram in the user's data space overlaid with two Allen projection-density maps from distinct injection sites." data-cap-fr="Abou-Hamdan et al. (2023), Fig. 5. Tractogramme cortico-thalamique dans l’espace de données de l’utilisateur, superposé à deux cartes Allen de densité de projection issues de sites d’injection distincts."><img src="assets/abou_fig5_result.png"><div class="cap">Abou-Hamdan et al. 2023 · Fig. 5 · click to enlarge</div></figure>
+<div class="result-copy"><p data-en><b>m2m creates the missing bridge between mesoscale viral tracing and individual neuroimaging.</b> Allen projection maps can be transferred into the subject’s native space and directly overlaid with tractography. Independent anatomical evidence therefore becomes operational within the same environment as the reconstructed pathways.</p><p data-fr><b>m2m crée le pont manquant entre le traçage viral à l’échelle mésoscopique et la neuroimagerie individuelle.</b> Les cartes de projections Allen peuvent être transférées dans l’espace natif du sujet et directement superposées à la tractographie. Une information anatomique indépendante devient ainsi exploitable dans le même environnement que les trajectoires reconstruites.</p></div></div>
+</div></section>
+
+<section class="section dark result-section"><div class="wrap">
+<div class="kicker" data-en>02 · AdaViT · PUT ANATOMY INSIDE TRACKING</div><div class="kicker" data-fr>02 · AdaViT · FAIRE ENTRER L’ANATOMIE DANS LE TRACKING</div>
+<h2 data-en>Anatomical evidence can prevent tractography from taking the wrong path.</h2><h2 data-fr>L’information anatomique peut empêcher la tractographie de prendre une mauvaise trajectoire.</h2>
+<div class="result-grid"><figure class="figure result-figure" data-img="assets/adavit_fig5.png" data-paper="assets/adavit-2026.pdf" data-cap-en="Poirier et al. (2026), Fig. 5. AdaViT versus baseline probabilistic tractography in a 50-µm isotropic ex vivo mouse brain dMRI acquisition, for a bottleneck ROI across the corpus callosum." data-cap-fr="Poirier et al. (2026), Fig. 5. Comparaison d’AdaViT à une tractographie probabiliste de référence sur une acquisition IRMd ex vivo de cerveau de souris à 50 µm isotropiques, dans une région de bottleneck du corps calleux."><img src="assets/adavit_fig5.png"><div class="cap">Poirier et al. 2026 · AdaViT · Fig. 5 · click to enlarge</div></figure>
+<div class="result-copy"><p data-en><b>AdaViT turns anatomical ground truth into an active tracking constraint.</b> During dMRI tractography, Allen viral-tracing projections dynamically restrict where a streamline can propagate. In a real corpus-callosum bottleneck, this produces cleaner transcallosal trajectories and strongly reduces anatomically implausible streamlines compared with conventional probabilistic tractography.</p><p data-fr><b>AdaViT transforme la vérité terrain anatomique en contrainte active de tracking.</b> Pendant la tractographie IRMd, les projections issues du traçage viral Allen restreignent dynamiquement les régions dans lesquelles une streamline peut se propager. Dans un bottleneck réel du corps calleux, cela produit des trajectoires transcallosales plus propres et réduit fortement les streamlines anatomiquement implausibles par rapport à une tractographie probabiliste conventionnelle.</p></div></div>
+</div></section>
+
+<section class="section result-section"><div class="wrap">
+<div class="kicker" data-en>03 · S-OCT · TRACTOGRAPHY BEYOND dMRI</div><div class="kicker" data-fr>03 · S-OCT · LA TRACTOGRAPHIE AU-DELÀ DE L’IRMd</div>
+<h2 data-en>What if tractography no longer needed diffusion MRI?</h2><h2 data-fr>Et si la tractographie n’avait plus besoin de l’IRM de diffusion ?</h2>
+<div class="result-grid"><figure class="figure result-figure" data-img="assets/poirier_fig14_result.png" data-paper="assets/poirier-2026.pdf" data-cap-en="Poirier et al. (2026), Fig. 14. Thalamocortical projections reconstructed directly from S-OCT tractography reproduce independent Allen Mouse Brain Connectivity Atlas viral-tracing experiments for somatosensory, orbital and motor cortical areas." data-cap-fr="Poirier et al. (2026), Fig. 14. Des projections thalamo-corticales reconstruites directement par tractographie S-OCT reproduisent des expériences indépendantes de traçage viral de l’Allen Mouse Brain Connectivity Atlas pour les aires somatosensorielle, orbitale et motrice."><img src="assets/poirier_fig14_result.png"><div class="cap">Poirier et al. 2026 · Fig. 14 · S-OCT tractography × Allen viral tracing · click to enlarge</div></figure>
+<div class="result-copy"><p data-en><b>Here, tractography leaves diffusion MRI altogether.</b> Fiber orientations measured directly from 10-µm isotropic S-OCT microscopy are used to reconstruct three-dimensional white-matter trajectories. The resulting thalamocortical pathways reproduce independent Allen viral-tracing experiments: microscopy is no longer only a validation tool — it becomes the imaging substrate for tractography itself.</p><p data-fr><b>Ici, la tractographie quitte complètement l’IRM de diffusion.</b> Les orientations des fibres mesurées directement par microscopie S-OCT isotrope à 10 µm servent à reconstruire des trajectoires tridimensionnelles de substance blanche. Les projections thalamo-corticales obtenues reproduisent des expériences indépendantes de traçage viral Allen : la microscopie n’est plus seulement un outil de validation — elle devient le support d’imagerie de la tractographie elle-même.</p></div></div>
+</div></section>
+</main>
+<footer><div class="wrap">Selected Scientific Outputs · 2022–2026</div></footer>
+
+<div class="modal" id="modal"><div class="modalbox"><div class="modaltop"><b id="mtitle">Figure</b><button class="close" id="close">×</button></div><img id="mimg"><div class="modalcap" id="mcap"></div><div class="modalactions"><a id="mpaper" target="_blank" data-en>Open the article / PDF ↗</a><a id="mpaperfr" target="_blank" data-fr>Ouvrir l’article / PDF ↗</a></div></div></div>
+<script>
+const html=document.documentElement,en=document.getElementById('en'),fr=document.getElementById('fr');
+function lang(l){html.classList.toggle('fr',l==='fr');html.lang=l;en.classList.toggle('active',l==='en');fr.classList.toggle('active',l==='fr');document.querySelectorAll('.cross-en').forEach(x=>x.style.display=l==='en'?'inline-block':'none');document.querySelectorAll('.cross-fr').forEach(x=>x.style.display=l==='fr'?'inline-block':'none');localStorage.setItem('mt-lang',l)}
+en.onclick=()=>lang('en');fr.onclick=()=>lang('fr');lang(localStorage.getItem('mt-lang')||'en');
+const modal=document.getElementById('modal'),mi=document.getElementById('mimg'),mc=document.getElementById('mcap'),mp=document.getElementById('mpaper'),mpf=document.getElementById('mpaperfr');
+document.querySelectorAll('.figure').forEach(f=>f.onclick=()=>{mi.src=f.dataset.img;mc.textContent=html.lang==='fr'?(f.dataset.capFr||f.dataset.capEn):f.dataset.capEn;mp.href=mpf.href=f.dataset.paper;modal.classList.add('open')});
+document.getElementById('close').onclick=()=>modal.classList.remove('open');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
+</script></body></html>
