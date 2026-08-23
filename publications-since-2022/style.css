@@ -143,3 +143,78 @@ html.fr .summary [data-fr]{
 
 /* V1.9 */
 .summary.summary-two .summary-label{display:inline!important;flex:1 1 auto!important;font-size:18px!important;line-height:1.25!important;margin:0!important}
+
+
+/* V2.0 — visible doctoral-work badges */
+.supervision-legend{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:14px 0;
+  background:rgba(255,250,245,.6);
+}
+.supervision-legend .wrap{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.supervision-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:10px 0 2px;
+}
+.supervision-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  line-height:1;
+  border:1px solid #e6b38e;
+  background:#fff0e5;
+  color:#9a4f1f;
+}
+.supervision-badge.doctoral::before{
+  content:"🎓";
+  font-size:13px;
+}
+
+
+/* V3.0 — doctoral-work badges only within publication cards */
+.supervision-legend{display:none!important}
+.supervision-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:10px 0 2px;
+}
+.supervision-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.15;
+  border:1px solid #e6b38e;
+  background:#fff0e5;
+  color:#9a4f1f;
+}
+.supervision-badge.doctoral::before{
+  content:"🎓";
+  font-size:13px;
+}
+
+/* V4.0 — Selected output badges are active links without changing appearance */
+a.tag.selected-output-link{
+  text-decoration:none!important;
+  color:inherit!important;
+  cursor:pointer;
+}
+a.tag.selected-output-link:hover{
+  text-decoration:none!important;
+  filter:brightness(.97);
+}
